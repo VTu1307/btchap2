@@ -1,19 +1,15 @@
+//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
+// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        // Tạo đối tượng Author
-        Author author1 = new Author("AuthorName1", "author1@example.com", 'M');
-        Author author2 = new Author("AuthorName2", "author2@example.com", 'F');
+        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
+        // to see how IntelliJ IDEA suggests fixing it.
+        System.out.printf("Hello and welcome!");
 
-        // Tạo mảng các tác giả
-        Author[] authors = { author1, author2 };
-
-        // Tạo đối tượng Book
-        Book book = new Book("Java Programming", authors, 29.99, 100);
-
-        // In thông tin của sách
-        System.out.println(book);
-
-        // In tên các tác giả
-        System.out.println("Authors: " + book.getAuthorNames());
+        for (int i = 1; i <= 5; i++) {
+            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
+            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
+            System.out.println("i = " + i);
+        }
     }
 }

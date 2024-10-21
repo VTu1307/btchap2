@@ -1,10 +1,14 @@
 public class MyPoint {
-    private int x;
-    private int y;
+    private int x = 0;
+    private int y = 0;
+
+    public MyPoint() {
+    }
 
     public MyPoint(int x, int y) {
         this.x = x;
         this.y = y;
+
     }
 
     public int getX() {
@@ -22,22 +26,42 @@ public class MyPoint {
     public void setY(int y) {
         this.y = y;
     }
+
     public int[] getXY() {
-        return new int[] {x, y};
+        return new int[]{x, y};
     }
-    public void setXY(int x,int y){
-        this.x=x;
-        this.y=y;
+
+    public void setXY(int x, int y) {
+        this.x = x;
+        this.y = y;
 
     }
-    public double distance(MyPoint another){
-        int xDiff = this.x - another.x;
-        int yDiff = this.y - another.y;
-        return Math.sqrt(xDiff * xDiff + yDiff * yDiff);
 
-    }
     @Override
     public String toString() {
-        return "(" + x + "," + y + ")";
+        return "MyPoint [x=" + x + ", y=" + y + "]";
     }
+
+    public double distance(int x, int y) {
+        int deltaX = this.x - x;
+        int deltaY = this.y - y;
+        return Math.sqrt(deltaX * deltaX + deltaY * deltaY);
+    }
+
+    public double distance(MyPoint another) {
+        return distance(another.getX(), another.getY());
+    }
+
+    public double distance() {
+        return distance(0, 0);
+    }
+
+
 }
+
+
+
+
+
+
+
